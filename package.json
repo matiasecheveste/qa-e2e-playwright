@@ -1,0 +1,22 @@
+{
+  "name": "qa-e2e-playwright",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Automatización de pruebas con Playwright: extremo a extremo, API y accesibilidad con Page Objects",
+  "author": "Matías Nicolás Echeveste Cardozo",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "app": "node app/servidor.mjs",
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "informe": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}

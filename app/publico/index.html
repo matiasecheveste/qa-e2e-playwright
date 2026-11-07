@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- QA con Playwright — Matías Nicolás Echeveste Cardozo -->
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserva de turnos</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Reserva de turnos</h1>
+    <p id="usuario" aria-live="polite"></p>
+    <button id="salir" type="button" hidden>Cerrar sesión</button>
+  </header>
+  <main>
+    <form id="ingreso" aria-labelledby="titulo-ingreso" novalidate>
+      <h2 id="titulo-ingreso">Ingresar</h2>
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email" autocomplete="username" required>
+      <label for="clave">Contraseña</label>
+      <input id="clave" name="clave" type="password" autocomplete="current-password" required>
+      <p id="error-ingreso" class="error" role="alert"></p>
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <section id="agenda" aria-labelledby="titulo-agenda" hidden>
+      <h2 id="titulo-agenda">Turnos disponibles</h2>
+      <label for="tramite">Trámite</label>
+      <select id="tramite">
+        <option value="cedula">Cédula de identidad</option>
+        <option value="pasaporte">Pasaporte</option>
+        <option value="certificado">Certificado de domicilio</option>
+      </select>
+      <p id="mensaje" role="status"></p>
+      <div id="dias"></div>
+    </section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
