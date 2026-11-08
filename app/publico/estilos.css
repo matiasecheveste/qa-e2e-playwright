@@ -12,4 +12,7 @@ button.propio { background: #b91c1c; border-color: #b91c1c; }
 .error { color: #b91c1c; min-height: 1.2em; margin: 0; }
 ul { list-style: none; padding: 0; display: grid; gap: 6px; }
 li { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-bottom: 1px solid #e5e7eb; padding: 4px 0; }
-h3 { text-transform: capitalize; }
+h3::first-letter { text-transform: uppercase; }
+
+.pista { margin: 0 0 12px; font-size: .9rem; color: #475569; }
+.pista code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; }
